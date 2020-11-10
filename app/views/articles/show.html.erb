@@ -1,0 +1,13 @@
+<h1>ABVGD</h1>
+
+<p>
+  <%= link_to "Update #{@article.title}", edit_article_path(@article)  %>
+</p>
+
+<p>
+  <%= link_to "Remove #{@article.title}",
+                      article_path(@article),
+                      method: :delete,
+                      data: { confirm: "For real?"} %>
+</p>
+<%= link_to "Back to all philosophers",  articles_path%>
